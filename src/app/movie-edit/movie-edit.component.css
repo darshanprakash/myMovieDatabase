@@ -1,0 +1,12 @@
+.edit {
+  margin: 20px 0;
+  text-align: center;
+}
+.input {
+  margin: 20px 0;
+}
+.editButton {
+  margin: 0 40px;
+  border-color: transparent;
+  width: 100px;
+}

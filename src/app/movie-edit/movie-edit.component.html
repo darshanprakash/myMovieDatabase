@@ -1,0 +1,20 @@
+<div class="edit">
+  <h2>Edit movie details</h2>
+  <div class="input">
+    <label>Title:
+      <input [(ngModel)]="movie.title" placeholder="Title"/>
+    </label>
+  </div>
+  <div class="input">
+    <label>Description:
+      <input [(ngModel)]="movie.description" placeholder="About Movie"/>
+    </label>
+  </div>
+  <div class="input">
+    <label>Avg. Rating:
+      <input type="number" min="0" max="5" [(ngModel)]="movie.myRating"/>
+    </label>
+  </div>
+  <button class="editButton" (click)="goBack()">Go back</button>
+  <button class="editButton" (click)="save()">Save changes</button>
+</div>

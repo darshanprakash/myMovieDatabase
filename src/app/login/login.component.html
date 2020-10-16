@@ -1,0 +1,11 @@
+<div class="login">
+  <h2>Login</h2>
+  <div class="input"><label>Username:<input #userName/></label></div>
+  <div class="input"><label>Password:<input #password/></label></div>
+  <button class="loginButton"
+    (click)="checkLogin(userName.value, password.value);"
+  >
+    Submit
+  </button>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="logout">
+  <button class="logoutButton" (click)="logout()"> Logout</button>
+</div>
+<app-movie-search></app-movie-search>
+<h3>Movies</h3>
+<div class="filter">
+  Filter By Rating
+  <button (click)="getMoviesByRating(1)"> 1 </button>
+  <button (click)="getMoviesByRating(2)"> 2 </button>
+  <button (click)="getMoviesByRating(3)"> 3 </button>
+  <button (click)="getMoviesByRating(4)"> 4 </button>
+  <button (click)="getMoviesByRating(5)"> 5 </button>
+  <button (click)="getMoviesByRating(0)"> Show All </button>
+</div>
+<div style="text-align: center">
+  <a *ngIf="movies.length===0"> No movies found for the filtered rating!</a>
+  <a *ngIf="selectedRating>0 && selectedRating<=5 && movies.length !==0"> Showing movies which have an average rating {{selectedRating}}</a>
+</div>
+<div class="grid grid-pad">
+  <a *ngFor="let movie of movies" class="col-1-4" routerLink="/detail/{{movie.id}}">
+    <div class="module movie">
+      <h4>{{movie.title | titlecase}}</h4>
+    </div>
+  </a>
+</div>
+
+

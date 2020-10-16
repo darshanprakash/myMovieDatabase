@@ -1,0 +1,11 @@
+.login {
+  margin: 20px 0;
+  text-align: center;
+}
+.input {
+  margin: 20px 0;
+}
+.loginButton {
+  border-color: transparent;
+  width: 100px;
+}

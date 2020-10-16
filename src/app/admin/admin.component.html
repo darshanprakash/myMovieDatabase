@@ -1,0 +1,28 @@
+<div class="logout">
+  <button class="logoutButton" (click)="logout()"> Logout</button>
+</div>
+<div class="admin">
+  <div class="input"><label>Movie Title:<input #newMovieTitle/></label></div>
+  <div class="input"><label>Movie Description:<input #newMovieDescription/></label></div>
+  <div class="input"><label>Movie Rating:<input type="number" min="0" max="5" #newMovieRating/></label></div>
+  <button
+    class="addButton"
+    (click)="addMovie(newMovieTitle.value, newMovieDescription.value, newMovieRating.valueAsNumber);"
+  >
+    Add Movie
+  </button>
+  <h2>My Movies</h2>
+</div>
+<div class="admin">
+  <ul class="movies">
+    <li *ngFor="let movie of movies">
+      <a routerLink="/edit/{{movie.id}}" class="movie">
+        {{movie.title | titlecase}}
+      </a>
+      <button class="delete" title="delete hero" style="float: right"
+              (click)="deleteMovie(movie)">x
+      </button>
+    </li>
+  </ul>
+</div>
+
